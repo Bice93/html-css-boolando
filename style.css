@@ -20,6 +20,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 
 .box-header{
@@ -27,7 +28,7 @@
     /* border: 1px solid black; */
 }
 
-a{
+.gender > a, .login > a{
     text-decoration: none;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
@@ -60,17 +61,22 @@ a{
 
 .box-main{
     /* background-color: blanchedalmond; */
-    border: 1px solid black;
-    height: 600px;
+    /* border: 1px solid black; */
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .card{
-    width: 250px;
+    width: calc(100% / 3 - 20px);
+    margin-bottom: 50px;
     /* height: 500px; */
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
-.photo{
+.card-photo{
     width: 100%;
     position: relative;
     /* height: 400px; */
@@ -86,30 +92,42 @@ a{
     display: none;
 }
 
-.photo:hover .first-img{
+.card-photo:hover .first-img{
     display: none;
 }
 
-.photo:hover .img-hover{
+.card-photo:hover .img-hover{
     display: inline;
 }
 
 .sale{
     background-color: red;
-    padding: 1px 4px;
+    padding: 4px 10px;
     font-size: 12px;
     position: absolute;
     bottom: 40px;
     left: 0px;
+    font-weight: bold;
 }
 
 .green{
+    background-color: rgb(57, 196, 57);
+    padding: 4px 10px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    font-weight: bold;
+}
+
+.single-green{
     background-color: rgb(57, 196, 57);
     padding: 1px 4px;
     font-size: 12px;
     position: absolute;
     bottom: 40px;
-    left: 35px;
+    left: 0px;
+    font-weight: bold;
 }
 
 .like{
@@ -125,8 +143,9 @@ a{
     color:red;
 }
 
-.brand{
+.card-brand{
     width: 100%;
+    
     /* height: 100px; */
     /* background-color: rgb(234, 193, 143); */
 }
@@ -159,19 +178,44 @@ a{
 }
 
 .box-footer{
-    background-color: cornsilk;
-    border: 1px solid green;
+    /* background-color: cornsilk;
+    border: 1px solid green; */
     display: flex;
     justify-content: space-between;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 .information{
-    width: 200px;
-    border: 1px solid red;
+    width: 400px;
+    /* border: 1px solid red; */
+}
+
+.information > p{
+    font-weight: bolder;
+    padding: 5px 0;
+}
+
+.information > a{
+    font-size: 13px;
+    text-decoration: none;
+    margin-right: 3px;
+    color: white;
 }
 
 .social{
     width: 200px;
-    border: 1px solid red; 
+    /* border: 1px solid red;  */
     text-align: end;
+    padding: 10px 0;
+}
+
+.social > p{
+    font-size: 13px;
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+.social > i{
+    margin-left: 10px;
 }
